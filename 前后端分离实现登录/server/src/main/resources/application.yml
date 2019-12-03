@@ -1,0 +1,38 @@
+spring:
+    jmx:
+        default-domain:demo
+
+logging:
+  level:
+    root: info
+    com.wg: debug
+  file: demo.log
+
+server:
+  port: 9696
+  servlet:
+    context-path: /demo
+  error:
+    path: /demo/error
+redis:
+  host:192.168.1.191
+  port:6379
+  password:cnhis
+  maxIdle:300
+  maxActive:600
+  maxWait:1000
+  testOnBorrow:true
+
+#jwt
+jwt:
+  header: token
+  secret: mySecret
+  # token 过期时间/毫秒，6小时  1小时 = 3600000 毫秒
+  expiration: 21600000
+  # 在线用户key
+  online: online-token
+  # 验证码
+  codeKey: code-key
+#登录图形验证码有效时间/分钟
+loginCode:
+  expiration: 2
