@@ -11,10 +11,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-/**
- * @author Zheng Jie
- * @date 2018-12-10
- */
+
 @Service
 public class RedisServiceImpl  {
 

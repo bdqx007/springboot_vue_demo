@@ -1,7 +1,6 @@
 spring:
     jmx:
-        default-domain:demo
-
+        default-domain: demo
 logging:
   level:
     root: info
@@ -15,24 +14,22 @@ server:
   error:
     path: /demo/error
 redis:
-  host:192.168.1.191
-  port:6379
-  password:cnhis
-  maxIdle:300
-  maxActive:600
-  maxWait:1000
-  testOnBorrow:true
+  host: 192.168.1.191
+  port: 6379
+  password: cnhis
+  maxIdle: 300
+  maxActive: 600
+  maxWait: 1000
+  testOnBorrow: true
 
 #jwt
 jwt:
   header: token
-  secret: mySecret
-  # token 过期时间/毫秒，6小时  1小时 = 3600000 毫秒
+  secret: secretInfo
   expiration: 21600000
-  # 在线用户key
   online: online-token
-  # 验证码
   codeKey: code-key
-#登录图形验证码有效时间/分钟
+  privateKey: MIICeAIBADANBgkqhkiG9w0BAQEFAASCAmIwggJeAgEAAoGBAMa6bUdZRwqS1pzWruHBZSlzOTvpxq1vcqireYqNE+8MDz1Rc+G6AZDi9waZkJyVm2q7jQB7aZRoZzALq7w8v8fyr7ggjDa+6iJgA41zxFdFnQIcfOdzp3Hfs9ufOd8NVa5Mf6Ve9KXv+hxIH+KazPyK+P+FNqY5AYrzBI3dbgOPAgMBAAECgYEAiV9foR2W3TlJ/5rrwwUEIBYVb1QX0dYjhXMbjmodaHaGplWC7Hu/D1/FcRuAeq10hOBnBPlKr5tIEU9QBMxdqOqpiYSRtOX24FdJKhBsiezw7G6x0ze7CBE1C3XvHqwTDkA/U9VnR9xWFsz9Ks8GSgFchxJaCkRJpriF2+iPPOkCQQDwEqKpqUHIpoOdIXycxS3DLiWDGGxSjQYJHwXySgT+ST2Q8UFqf5yLuHRVsbA0/teFRjzFEvChPQQDBy3rUyPbAkEA0+mZ0Vl97ct4ZCHw3qUBtTqzzWJpy4f4NZmBD1q0q/ZwlvPUBh2LEbtc8WWDPj+ytS6een4Ef9NWgMzwYm0HXQJBAK8g6QhbMGHvFpPJmd3C+V8oirTXXC3cMkr1FqFo3buiMgdJ9y55aPmD1VmuBZyjSxUt56bb6i21FPgghJ7mR4ECQForNeYcfDboswt4XbN+5qEkn0kvLPELpBO6g23zHJlnPTUd/wOzIm+jF8MnfJbKJ9JsSca5RFTXqiEYEtjup4kCQQCPYlaDmctcgT8teyrVcdolfaZJJNtS9Lg5aiUyBWr1wj9aeqbisNDB+OINBV+DYfpg7uhNaY0dYLrfwdEKy2ZJ
+
 loginCode:
   expiration: 2

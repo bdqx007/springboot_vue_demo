@@ -15,7 +15,7 @@ import java.util.function.Function;
 @Component
 public class JwtTokenUtil implements Serializable {
 
-    private static final long serialVersionUID = -1501601231108978451L;
+    private static final long serialVersionUID = -4101601621108974821L;
     private Clock clock = DefaultClock.INSTANCE;
 
     @Value("${jwt.secret}")
@@ -84,7 +84,6 @@ public class JwtTokenUtil implements Serializable {
                 // 一旦客户端得知这个secret, 那就意味着客户端是可以自我签发jwt了。
                 //指定签名的时候使用的签名算法
                 .signWith(SignatureAlgorithm.HS512, secret)
-                //就开始压缩为xxxxxxxxxxxxxx.xxxxxxxxxxxxxxx.xxxxxxxxxxxxx这样的jwt
                 .compact();
     }
 
